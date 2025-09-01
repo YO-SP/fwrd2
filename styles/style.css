@@ -1,0 +1,278 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden; 
+}
+
+body {
+    width: 100%;   
+    height: 100%; 
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    background-color: rgb(255, 255, 255);
+    user-select: none; 
+}
+
+body.dark {
+    background-color: rgb(0, 0, 0); 
+}
+
+header {
+    margin-bottom: 60px;
+}
+
+header h1 {
+    font-family: "Oswald", sans-serif;
+    font-size: 28px;
+    font-weight: 700;
+    margin: 0;
+    padding: 15px;
+    text-align: center;
+    background: black;
+    color: white;
+}
+
+#nav_bar {
+    background-color: black; 
+    display: flex; 
+    justify-content: center;
+    padding: 10px; 
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 5;
+}
+
+#nav_bar a,
+#nav_bar button {
+    font-family: "Oswald", sans-serif; 
+    font-weight: 550; 
+    color: white; 
+    text-decoration: none;
+    padding: 10px 20px; 
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 17px; 
+}
+    
+#nav_bar a:hover,
+#nav_bar button:hover {
+    background-color: white;
+    color: black; 
+}
+
+#homepage {
+    display: flex; 
+    justify-content: center;
+    position: relative;
+    width: 100%; 
+    overflow-x: hidden;
+    flex-wrap: wrap;
+}
+
+#homepage h2 {
+    display: none;
+}
+
+#homepage img { 
+    display: flex;
+    max-width: 100%;
+    height: auto;
+}
+
+#triple{
+    display: flex; 
+    justify-content: center;
+}
+
+
+#tagline {
+    display: flex; 
+    justify-content: center; 
+    position: absolute; 
+    top: 30%;    
+    text-align: center;
+    width: 100%;
+}
+
+
+#tagline h3 {
+    display: none;
+}
+
+#about_us {
+    scroll-margin-top: 60px;
+    color: rgb(0, 0, 0); 
+}
+
+#about_us h2 {
+    text-align: center; 
+    font-family: "Oswald", sans-serif;
+    font-weight: 700;
+    font-size: 50px;
+}
+
+body.dark #about_us h2 {
+    color: white; 
+}
+
+#about_us p {
+    padding-left: 100px;
+    padding-right: 100px; 
+    font-family: "Oswald", sans-serif;
+    font-weight: 500;
+    font-size: 23px;
+    text-align: justify; 
+}
+
+body.dark #about_us p {
+    color: white; 
+}
+
+#judul_filo {
+    scroll-margin-top: 60px;
+    color: rgb(0, 0, 0);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#judul_filo h2 {
+    text-align: center; 
+    font-family: "Oswald", sans-serif;
+    font-weight: 700;
+    font-size: 50px;
+}
+
+body.dark #judul_filo h2 {
+    color: white; 
+}
+
+#judul_filo p {
+    padding-left: 100px;
+    padding-right: 100px; 
+    font-family: "Oswald", sans-serif;
+    font-weight: 500;
+    font-size: 23px;
+    text-align: justify; 
+}
+
+body.dark #judul_filo p {
+    color: white; 
+}
+
+#judul_filo figure {
+    margin: 30px 0;
+    text-align: center;
+}
+
+#judul_filo img {
+    width: 300px;  
+    height: 200px; 
+}
+
+body.dark #judul_filo img {
+    border-style: solid; 
+    border-color: rgb(255, 255, 255);
+    border-width: 1px;
+}
+
+#action_cam {
+    scroll-margin-top: 60px;
+    text-align: center; 
+    font-family: "Oswald", sans-serif;
+    font-weight: 700;
+    font-size: 35px; 
+}
+
+body.dark #action_cam {
+    color: rgb(255, 255, 255); 
+}
+
+#action_pack {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center;
+    gap: 5px; 
+}
+
+#action_pack figure {
+    margin: 0;
+}
+
+#action_pack img {
+    width: 480px; 
+    height: 480px;
+    border-style: solid; 
+    border-color: black;
+    border-width: 1px;
+}
+
+#action_pack img:hover {
+    opacity: 0.7;
+}
+
+footer {
+    display: flex; 
+    justify-content: center; 
+    align-items: flex-end; 
+    background-color: black;
+    color: white;
+    padding: 10px;
+}
+
+footer p {
+    font-family: "Oswald", sans-serif;
+    font-size: 15px;
+}
+
+@media screen and (max-width: 768px) {
+  #about_us p,
+  #judul_filo p {
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 18px;
+  }
+
+  #judul_filo {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #judul_filo img {
+    width: 90%;
+    height: auto;
+    margin: 20px 0;
+  }
+
+  #action_pack img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  #about_us h2,
+  #judul_filo h2,
+  #action_cam h2 {
+    font-size: 30px;
+  }
+
+  #about_us p,
+  #judul_filo p {
+    font-size: 16px;
+  }
+
+  #nav_bar {
+    flex-wrap: wrap;
+  }
+
+  #nav_bar a,
+  #nav_bar button {
+    padding: 8px 12px;
+    font-size: 14px;
+  }
+}
